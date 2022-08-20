@@ -6,5 +6,6 @@ public class time {
         int hr = sc.nextInt(), min = sc.nextInt();
         System.out.println("Secs = "+(hr*3600+min*60));
         sc.close();
+        System.out.println("fuck dog");
     }
 }
