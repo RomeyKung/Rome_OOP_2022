@@ -1,6 +1,11 @@
-public class main {
+package Lab09_01;
+
+
+
+
+public class Main {
     public static void main(String[] args) {
-        Customer3 cust = new Customer3("Somsri", "Boonjing");
+        Customer cust = new Customer("Somsri", "Boonjing");
         Account acct1 = new Account(5000, "Somsri01");
         Account acct2 = new Account(3000, "Somsri02");
         cust.addAccount(acct1);
