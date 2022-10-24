@@ -1,9 +1,7 @@
-package Lab09_01;
-
-
-
+package Main;
 
 public class Main {
+
     public static void main(String[] args) {
         Customer cust = new Customer("Somsri", "Boonjing");
         Account acct1 = new Account(5000, "Somsri01");
@@ -15,9 +13,10 @@ public class Main {
         cust.getAccount(1).deposit(3000);
         // แสดงข้อมูลของลูกค้า เช่น Somsri Boonjing has 2 accounts.
         System.out.println(cust);
-        // ทดลองสร้างบัญชีและเพิEมบัญชีนัFนๆ ให้กับลูกค้า มากกว่า 5 บัญชี
+        // ทดลองสร้างบัญชีและเพิ่มบัญชีนั้นๆ ให้กับลูกค้า มากกว่า 5 บัญชี
         for (int i = 0; i < cust.getNumOfAccount(); i++) {
             cust.getAccount(i).showAccount();
         }
     }
+
 }

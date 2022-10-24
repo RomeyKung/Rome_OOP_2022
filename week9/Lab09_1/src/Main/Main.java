@@ -1,7 +1,6 @@
-package Lab09_00;
-
+package Main;
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Bank myBank = new Bank();
         Account acct1 = new Account(5000,"Sommai");
         Account acct2 = new Account(3000,"Somchai");
@@ -22,4 +21,5 @@ public class Main {
             myBank.getAccount(i).showAccount();
         }
     }
+        
 }
