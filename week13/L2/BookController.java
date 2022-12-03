@@ -8,12 +8,12 @@ public class BookController implements ActionListener, WindowListener{
     BookModel model;
     Book book;
     private int index;
-    
+
     public BookController(){
         bookView = new BookView();
         model = new BookModel();
         index = Integer.parseInt(bookView.getCollectionTextField().getText());
-        
+
         bookView.getAddButton().addActionListener(this);
         bookView.getUpdateButton().addActionListener(this);
         bookView.getDeleteButton().addActionListener(this);
@@ -21,7 +21,7 @@ public class BookController implements ActionListener, WindowListener{
         bookView.getRightButton().addActionListener(this);
         bookView.getBookViewWindow().addWindowListener(this);
     }
-    
+
     public void actionPerformed(ActionEvent ae){
         if(ae.getActionCommand() == "Add"){
             bookAdd = new BookAdd();
@@ -32,7 +32,7 @@ public class BookController implements ActionListener, WindowListener{
             JOptionPane.showMessageDialog(null, "Done it.", "",JOptionPane.PLAIN_MESSAGE);
             bookAdd.getBookAddWindow().dispose();
         }else if(ae.getActionCommand() == "Update" && index != 0){
-            model.getBooks().set(index, new Book(bookView.getNameTextField().getText(), Double.parseDouble(bookView.getPriceTextField().getText()), (String)(bookAdd.getTypeComboBox().getSelectedItem())));
+            model.getBooks().set(index, new Book(bookView.getNameTextField().getText(), Double.parseDouble(bookView.getPriceTextField().getText()), (String)(bookView.getTypeComboBox().getSelectedItem())));
             JOptionPane.showMessageDialog(null, "Done it.", "Update",JOptionPane.PLAIN_MESSAGE);
         }else if(ae.getActionCommand() == "Delete" && index != 0){
             model.getBooks().remove(index);
